@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>夏雨一周 - 莫奈如一</title>
+    
+    <meta name="description" content="到厦门一周了，一切都好，风清气爽，秀色可餐。
+不妙的是我们似乎挑错了季节，雨一直下，颠覆了我原本对厦门的想象。
+背过来的夏装根本没机会露脸，随身的一件春季夹克倒是救了我。
+第一天刚到客栈，顾不上舟车劳顿的我们去海滩边走了一趟。
+卷起裤管光着脚丫踩在沙滩上的感觉不赖，尤其是细沙上。
+海风很大！吹得人直哆嗦，夹紧身子的我对沙滩上坦肩露背拍婚纱照的新娘子们由衷佩服。
+义工每天的任务是给房间换床单&#43;打扫卫生&#43;其他。
+因为是周一到的，刚好赶上退房高峰期，累得要死，还好心很嗨皮。
+老板是退伍军人，第一天一起吃饭恰巧战友来访，听他们侃部队里的故事：特种兵，野外训练，退伍当打手，帮政府拆迁，给企业当讲师。。。各种传奇，津津有味。
+店长是一名憨厚的福安人，是以前老板带过的兵，为人随和仗义。粗活累活抢着干，尽管他是店长。值得尊敬。
+我们特别聊的来，后来才发现原来我们的生日居然是同一天。
+这几天干活很累，干活的过程中我还突然发现个问题。
+同样是包吃包住，我们却总是不领爸妈的情；
+但是在外面，人家就给个三餐一宿，我们就心甘情愿屁颠屁颠跑前跑后。
+唉！
+想到这里我赶紧给家里打了个电话，跟他们探讨这个贱贱的发现。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">夏雨一周</h1>
+    <div class="post-meta">March 31, 2013</div>
+  </header>
+  <div class="post-content"><p>到厦门一周了，一切都好，风清气爽，秀色可餐。</p>
+
+<p>不妙的是我们似乎挑错了季节，雨一直下，颠覆了我原本对厦门的想象。</p>
+
+<p>背过来的夏装根本没机会露脸，随身的一件春季夹克倒是救了我。</p>
+
+<p>第一天刚到客栈，顾不上舟车劳顿的我们去海滩边走了一趟。</p>
+
+<p>卷起裤管光着脚丫踩在沙滩上的感觉不赖，尤其是细沙上。</p>
+
+<p>海风很大！吹得人直哆嗦，夹紧身子的我对沙滩上坦肩露背拍婚纱照的新娘子们由衷佩服。</p>
+
+<p>义工每天的任务是给房间换床单+打扫卫生+其他。</p>
+
+<p>因为是周一到的，刚好赶上退房高峰期，累得要死，还好心很嗨皮。</p>
+
+<p>老板是退伍军人，第一天一起吃饭恰巧战友来访，听他们侃部队里的故事：特种兵，野外训练，退伍当打手，帮政府拆迁，给企业当讲师。。。各种传奇，津津有味。</p>
+
+<p>店长是一名憨厚的福安人，是以前老板带过的兵，为人随和仗义。粗活累活抢着干，尽管他是店长。值得尊敬。</p>
+
+<p>我们特别聊的来，后来才发现原来我们的生日居然是同一天。</p>
+
+<p>这几天干活很累，干活的过程中我还突然发现个问题。</p>
+
+<p>同样是包吃包住，我们却总是不领爸妈的情；</p>
+
+<p>但是在外面，人家就给个三餐一宿，我们就心甘情愿屁颠屁颠跑前跑后。</p>
+
+<p>唉！</p>
+
+<p>想到这里我赶紧给家里打了个电话，跟他们探讨这个贱贱的发现。</p>
+</div>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

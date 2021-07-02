@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>善忘初衷 - 莫奈如一</title>
+    
+    <meta name="description" content="
+
+忘记初衷，是这个充满诱惑的时代下，每一个人每天都在犯的错误。
+
+拿写博客这件事来讲，当初只是为了记录下所思所想，锻炼下语言组织和逻辑思维。于是我在新浪注册了博客，后来发现网易的模版更好看，于是跳到那边，不久又发现blogbus的自定义程度更高，马上又搬到那里。
+
+过了一段时间后，发现blogbus的审核要求太严了，经常会被和谐，于是便摸索到wordpress。这下不得了，wordpress几乎百分百的自定义程度，让我欣喜若狂。我决定也折腾个独立站点。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">善忘初衷</h1>
+    <div class="post-meta">December 15, 2013</div>
+  </header>
+  <div class="post-content"><p><img class="alignnone" alt="" src="http://i1086.photobucket.com/albums/j445/sunfe2009/131215.jpg" width="595" height="100" /></p>
+
+<p>忘记初衷，是这个充满诱惑的时代下，每一个人每天都在犯的错误。</p>
+
+<p>拿写博客这件事来讲，当初只是为了记录下所思所想，锻炼下语言组织和逻辑思维。于是我在新浪注册了博客，后来发现网易的模版更好看，于是跳到那边，不久又发现blogbus的自定义程度更高，马上又搬到那里。</p>
+
+<p>过了一段时间后，发现blogbus的审核要求太严了，经常会被和谐，于是便摸索到wordpress。这下不得了，wordpress几乎百分百的自定义程度，让我欣喜若狂。我决定也折腾个独立站点。</p>
+
+<p>首先，要开独立博客，必须得要有域名和空间吧！然后自然而然被各种免费域名免费空间诱惑了，注册了各种二级域名，免费空间。最后选择了thisman.tk这个简单好记的域名。博客命名为“这厮的天空”，瞧，既具异域风情又不乏中式品味，而且让人过目不忘。</p>
+
+<p>嗯，既然已经有了个这么棒的域名，那页面设计肯定不能太差，于是开始搜索各种漂亮的模版，几乎把能下载到的看得下去的theme全部试了一遍。但是从来不会有一款完全能够满足我那变态的审美及功能需求。于是我不得不自学了一些网页语言，要知道这对于一个文科生来讲，是下了多么大的决心！期间我不断抱怨为什么发明网络语言的不是中国人，甚至追溯到了中国近代史的落后缘由，还顺带把清朝统治者骂了一顿！</p>
+
+<p>然后就是接触到各种wp圈的大牛，他们经常会提到各种wp技巧啊，或者又有什么新的好玩的东西啊！我开始变得越来越不专注。另外，因为tk域名，很多人都不愿意跟你友链，这就是个问题啦！满足不了马斯洛需求了，于是我狠心斥资购买了huisay.com域名，取名为“诙说”，为了配上新域名，我又开始了模版的折腾，修改了大量的国外主题，但总归没达到我最满意的程度。</p>
+
+<p>终于，机会来了！虾子酱和沐歌的新主题在征名，抱着侥幸的态度，我提交了“Mossight”这个主题名，果然脱颖而出并获赠该主题。这款主题几乎满足了我所有的视觉上和控制上的欲望，但是仍然有些小细节我觉得可以做得更好。事实证明，念念不忘必有回响。不久，Mossight主题推出评测活动，我把自己的想法认真的整理出来参加了这个活动。嗯，再次幸运的获得了一等奖，然后把博客迁到了获赠的新主机。</p>
+
+<p>从这开始，我才慢慢放缓了折腾的脚步，域名、空间、主题都挺满意的。我突然觉得wp没意思了，没什么可折腾的了。是的，我完全忘记了，当初开设独立博客的动机。我退出了Mossight主题群，删掉了电脑上的本地环境和一切于相关的文件。开始每天刷刷微博和豆瓣，直到域名空间双双过期。</p>
+
+<p>偶尔突然想记录点什么，也只是在lofter写写。前些天，突然又莫名其妙的怀念折腾wp的那种感觉了。大概是真切的感受到了长时间不写东西导致思维退化带来的恐惧吧！</p>
+
+<p>我向来是想一出是一出，于是买了这个pupnote.com，翻译成“狗皮膏药”吧！希望这一次能够可持续发展下去。</p></div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://sunfe2009.github.io/tags/mossight">mossight</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/wordpress">wordpress</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E5%8D%9A%E5%AE%A2">博客</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E5%9B%9E%E5%BD%92">回归</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

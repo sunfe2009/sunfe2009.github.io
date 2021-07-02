@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>站住，厦门 - 莫奈如一</title>
+    
+    <meta name="description" content="有一种东西，你一盯着它，它就慢下来。你稍不留神，它就窜走了。
+我想你应该知道那是什么。
+一条条被班干部发到手机里的有关就业的信息时刻提醒着我，大学要结束了。
+结束就结束呗，我心里倒也不着急。不就是找工作么，在学校里待了16年，早想出去了。
+和几个朋友约好一起去魔都闯闯，我对大都市有天然的向往。尤其觉得自己的年轻时候应该在那里度过，毕竟也没吃过什么苦，所以不怕。
+前些日子，和一高中女同学通电话，得知她要结婚了。有点意外，印象中她是那种文艺女，以为会晚婚的，没想到才实习半年就进了围城。
+这么年轻！我觉得可惜。
+这件事给我触动很大，让我几乎怀疑自己是否还算年轻。
+按照我校习俗，大四下学期学生是要去实习的，如果没挂科的话。
+我上学期一口气挂了俩，同一个老师的俩门课。
+教务处安排考试的老师也是坑的一手好爹，补考时间不仅安排的晚，还把两门课之间叉开了一个礼拜，愣是把我留到了现在。
+毕业设计要等到5月，离这中间还有个把月。
+的空闲时间！
+自由太多的时候，人就会琢磨怎么花。
+于是，一系列想法新鲜出炉。
+我先是去剃了个光头。
+作为一个男生，我也经常被说“剪了跟没剪”一样。
+这一次，还没人这么说过。
+光头是一次体验，还不赖。你可以从四个方面感受到不同。
+1、别人的眼光，熟人的和陌生人的；
+2、洗头的频率，洗发水好经用啊；
+3、和大自然的接触，清风拂过，灌入每一个毛囊，咝~
+4、你对头型的想象，我一直以为自己是方头，没想到圆得这么厉害。
+试着学一种乐器。
+突然觉得人一辈子要是连一种乐器都不会把玩实在悲哀。
+什么东西既能培育生活情趣，又能方便携带随处卖弄呢？
+我买了一把布鲁斯口琴。
+正在练习中。
+另外，我打算出去穷游了。
+在厦门联系了一家旅馆，会在那边做一个月的义工。
+明天出发。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">站住，厦门</h1>
+    <div class="post-meta">March 23, 2013</div>
+  </header>
+  <div class="post-content"><p>有一种东西，你一盯着它，它就慢下来。你稍不留神，它就窜走了。</p>
+
+<p>我想你应该知道那是什么。</p>
+
+<p>一条条被班干部发到手机里的有关就业的信息时刻提醒着我，大学要结束了。</p>
+
+<p>结束就结束呗，我心里倒也不着急。不就是找工作么，在学校里待了16年，早想出去了。</p>
+
+<p>和几个朋友约好一起去魔都闯闯，我对大都市有天然的向往。尤其觉得自己的年轻时候应该在那里度过，毕竟也没吃过什么苦，所以不怕。</p>
+
+<p>前些日子，和一高中女同学通电话，得知她要结婚了。有点意外，印象中她是那种文艺女，以为会晚婚的，没想到才实习半年就进了围城。</p>
+
+<p>这么年轻！我觉得可惜。</p>
+
+<p>这件事给我触动很大，让我几乎怀疑自己是否还算年轻。</p>
+
+<p>按照我校习俗，大四下学期学生是要去实习的，如果没挂科的话。</p>
+
+<p>我上学期一口气挂了俩，同一个老师的俩门课。</p>
+
+<p>教务处安排考试的老师也是坑的一手好爹，补考时间不仅安排的晚，还把两门课之间叉开了一个礼拜，愣是把我留到了现在。</p>
+
+<p>毕业设计要等到5月，离这中间还有个把月。</p>
+
+<p>的空闲时间！</p>
+
+<p>自由太多的时候，人就会琢磨怎么花。</p>
+
+<p>于是，一系列想法新鲜出炉。</p>
+
+<p>我先是去剃了个光头。</p>
+
+<p>作为一个男生，我也经常被说“剪了跟没剪”一样。</p>
+
+<p>这一次，还没人这么说过。</p>
+
+<p>光头是一次体验，还不赖。你可以从四个方面感受到不同。</p>
+
+<p>1、别人的眼光，熟人的和陌生人的；</p>
+
+<p>2、洗头的频率，洗发水好经用啊；</p>
+
+<p>3、和大自然的接触，清风拂过，灌入每一个毛囊，咝~</p>
+
+<p>4、你对头型的想象，我一直以为自己是方头，没想到圆得这么厉害。</p>
+
+<p>试着学一种乐器。</p>
+
+<p>突然觉得人一辈子要是连一种乐器都不会把玩实在悲哀。</p>
+
+<p>什么东西既能培育生活情趣，又能方便携带随处卖弄呢？</p>
+
+<p>我买了一把布鲁斯口琴。</p>
+
+<p>正在练习中。</p>
+
+<p>另外，我打算出去穷游了。</p>
+
+<p>在厦门联系了一家旅馆，会在那边做一个月的义工。</p>
+
+<p>明天出发。</p>
+</div>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

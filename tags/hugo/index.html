@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>hugo - 莫奈如一</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    <link rel="alternate" type="application/rss+xml" href="http://sunfe2009.github.io/tags/hugo/index.xml" title="莫奈如一" />
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="list">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+<header class="page-header"><h1>hugo</h1></header>
+
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Go With Hugo</h2>
+  </header>
+  <section class="entry-content">
+   <p>缘起 一切都要从 21 世纪一〇年代的最后一个月说起。
+彼时，我正在为即将到来的 2020 年春节做出游计划，我和家人本来原本打算出国游玩，第一次尝试春节不在老家度过。
+我们本该在温暖的南国他乡，度过一段慵懒静谧的春节时光。
+然后，元气满满地回到上海，开始新一年的工作。
+为此，我买了无人机和数码相机，准备记录下这一过程。
+然而，远在八百里开外的武汉，华南海鲜市场的一位食客，凭借着刁钻的舌头，悄然改变了这一切。
+于是，我现在坐在电脑前。
+这是疫情爆发后我居家隔离的第二阶段第 25 天。
+这段空闲时间，让我想起了很多之前因为时（lan）间（duo）落下的待办事项。
+其中就包括——重拾博客。
+于是就有了这个全新的网站和这篇文章。
+经过 动了念头之后，我前前后后花了近一周，测试了N个不同的静态生成器StaticGen， 最后 hugo 得到了我的临幸。
+不为别的，只是因为在所有静态生成器安装的过程中，只有 hugo 没出大错。“大错”的意思就是我通过谷歌也不能解决的问题。
+当然，hugo 过程中也碰到了不少难题。
+难题 1——从 WordPress 导入到 hugo 总之很麻烦，最终通过插件wordpress-to-hugo-exporter解决内容导出导入。
+难题 2——格式错乱 由于之前在 WP 中用过第三方短码，导致输出混乱。好在我文章不多，通过全手工修整。（手酸）
+难题 3——图片无法显示 Markdown 格式没有错，但是图片就是无法显示，这个问题花的时间最长。
+原来是 hugo 最新的渲染引擎 goldmark 默认会过滤 HTML 标签，更换为旧版引擎 blackfriday 后解决。即在配置文件中添加
+ [markup] defaultMarkdownHandler = “blackfriday”
+ 仍有一些图片因为年代久远，已经丢失暂时没有更换。 以及，还有一些想要显示的页面暂时不知道如何实现。 不过先这样吧。
+收获 最大的收获当然是可以重新开始记录生活，要知道现在能安安静静坐下来码会儿博客实在是不容易。希望这一次可以坚持久一点，把这个习惯保持下来。 另外，借着整理旧博客的机会，重新看了下之前的博文，虽然已经年代久远不堪入目，但我很庆幸有这些记录，文字里依然能感受到年轻时我的热情和对生活的热爱。也激发我重新打开对生活的感官，重新慢慢记录生活。 还有个收获就是，在了解静态博客的过程中萌生了想要学习代码的念头。 这也许是一个好的开始吧！...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>February 25, 2020</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/go-with-hugo/"></a>
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

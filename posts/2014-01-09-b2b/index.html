@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>B2B - 莫奈如一</title>
+    
+    <meta name="description" content="我有一个癖好，喜欢去点别人的友情链接，one by one 那种，然后再逐一查看新博客的几乎每一篇文章，接着继续点新博客的友链，如此循环往复。
+
+当该博主的文章很有意思或者主题很好看的时候，我这种病态的行为会愈加强烈和不可收拾。
+
+这不刚刚把偶然发现的一个博客8年来所有的文章都看了一遍，是不是很病态？">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">B2B</h1>
+    <div class="post-meta">January 9, 2014</div>
+  </header>
+  <div class="post-content"><p>我有一个癖好，喜欢去点别人的友情链接，one by one 那种，然后再逐一查看新博客的几乎每一篇文章，接着继续点新博客的友链，如此循环往复。</p>
+
+<p>当该博主的文章很有意思或者主题很好看的时候，我这种病态的行为会愈加强烈和不可收拾。</p>
+
+<p>这不刚刚把偶然发现的一个博客8年来所有的文章都看了一遍，是不是很病态？</p>
+
+<p>独立博客最大的魅力就在于此，每一个hyper-link背后都会有无限的惊喜。</p>
+
+<p>那非独立博客也有hyper-link呀？那不同，非独立博客由于零门槛，其内容创造者太广泛，所以里面的推荐也太多太泛滥，毫无意义。</p>
+
+<p>而独立博客本身就是一个筛选器，至少把学习能力还不错的筛选出来了，起内容也算是稍有保障了。</p>
+
+<p>那为什么不直接去看新浪名博呢？那个又太遥远了，没有真实感，想靠近又感觉逼格还不够。</p>
+
+<p>比如人家上周又得了个拉力赛冠军，前天晚上又参加了某个慈善晚会的募捐&#8230;&#8230;即使他们写的是生活，也感觉get不到那个视角。看了之后或“哇噻”或“啧啧”，仅此而已。</p>
+
+<p>而WP博客就没有这种距离感，好像每个故事就发生在身边，具体且可感知。</p>
+
+<p>例如当我发现，某个关注了很久的博客突然写了篇《快要中考了，暂停更新》，卧槽，这个有着这么多牛逼故事，开发了这么多牛逼产品的人竟然是个初中生！！！我初中在干嘛？还在玩泥巴吧！卧槽！得努力啊！！或者某个博主考上研究生了或者是有什么喜事，会发自内心的为其感到高兴，同时默默的告诉自己，路漫漫其修远兮~嗯，看书去！</p>
+
+<p>瞧，这是切切实实能影响到自己心境，并驱动行为的！</p>
+
+<p>这就是为什么我喜欢独立博客（尽管写的少，看得多），喜欢B2B，blog to blog。</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p></div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://sunfe2009.github.io/tags/%E5%8D%9A%E5%AE%A2">博客</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E5%96%9C%E6%AC%A2">喜欢</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2">独立博客</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

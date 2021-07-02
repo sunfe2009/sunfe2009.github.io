@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>莫奈如一</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    <link rel="alternate" type="application/rss+xml" href="http://sunfe2009.github.io/index.xml" title="莫奈如一" />
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="list home">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <h1 class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></h1>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>我是怎样开始了我的本命年</h2>
+  </header>
+  <section class="entry-content">
+   <p>迎新
+我不说，肯定没人能猜到我2014第一天是怎么过的！
+31日晚，其实本来想买点吃的，看看跨年晚会就这么过了。主要是当晚交通管制，8点就把地铁停了。这就意味着，今晚出去很可能就回不来了，而我是极其不愿熬夜的。但是考虑到所有人一起见面不易，还是要过去打个照面的。
+不出意外，跨完年已经基本打不到车了，跑去拦车还和大伙走散了，手机也没电了。眼看就要蹲大街的节奏，好歹新年第一天，流落街头太惨了，于是决定找个快捷酒店过一晚。结果附近的酒店都没房了，是呀，我早该料到，1314这么特殊的日子，肯定没房。
+...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>January 2, 2014</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2014-01-02-1314/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>想归想</h2>
+  </header>
+  <section class="entry-content">
+   <p>挑个大牌档
+配菜是月亮
+吃小吃地点在异乡
+跟时间打仗
+装酷往前闯
+比赛谁耐力强
+酒后的阳台昏暗的远方
+想老家得翻过几座山
+想爱想不凡
+越想心越慌
+有梦问题是怎样兑换
+...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>December 22, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-12-22-xiang-gui-xiang/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>听君《一席》话</h2>
+  </header>
+  <section class="entry-content">
+   <p>之前朋友强烈推荐过《一席》，一了解才知道原来是中国版的TED。看了几集觉得还不错，没有看TED那种距离感，毕竟故事就发生在脚下，而不是遥远的美国，所以故事更有存在感。现在还有印象的包括“乔小刀”那集和一个在香港的印度人Vivek那集。
+上个周末终于有机会去现场听了一次，感觉非常棒！原本以为会像视频里那样半个小时的样子就完了。去了才知道，每一次的《一席》会历经6个小时左右，从下午1点到晚上7点，而上个周末更是接近9点才结束。不过还好，作为一个传播“人文、科技、白日梦”的正能量团体，一席还提供了免费的水和食物。请你过来长姿势，看演出，开眼界，还管嘴，业界良心啊！
+...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>December 19, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-12-19-ting-jun-yi-xi-hua/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>上海的夏湘潭的冬</h2>
+  </header>
+  <section class="entry-content">
+   <p>到上海差不多170天了，时间过的真快，烧烤模式转眼切换到冰箱模式。
+夏天的时候我就觉得上海人民在气候这个问题上，是没有见过世面的，就这点高温就大呼小叫受不了了？好歹还有点风吹在身上啊！要知道，这种气候在湘潭简直算得上春天了！！湘潭的夏天几乎是没有风这个概念的，每一天都是极闷的，跟顶着一个锅盖子似的。今年夏天新闻报道的一群人在天台睡“烧烤”觉的就是我们隔壁学校的，这么说吧，女汉子在寝室都是光着膀子的。
+...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>December 17, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-12-17-shang-hai-de-xia-xiang-tan-de-dong/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>确实够【残酷】</h2>
+  </header>
+  <section class="entry-content">
+   <p>刚刚看完《残酷极简思维》，这本书再一次证明了，在商业世界里，很多时候，盒子，比盒子里的东西，更重要。
+用大号字体和单页配图呈现出50个看似高深伟大的所谓改变世界的发明，其实就是50个知识小百科。
+...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>December 16, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-12-16-que-shi-gou-can-ku/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>善忘初衷</h2>
+  </header>
+  <section class="entry-content">
+   <p>忘记初衷，是这个充满诱惑的时代下，每一个人每天都在犯的错误。
+拿写博客这件事来讲，当初只是为了记录下所思所想，锻炼下语言组织和逻辑思维。于是我在新浪注册了博客，后来发现网易的模版更好看，于是跳到那边，不久又发现blogbus的自定义程度更高，马上又搬到那里。
+过了一段时间后，发现blogbus的审核要求太严了，经常会被和谐，于是便摸索到wordpress。这下不得了，wordpress几乎百分百的自定义程度，让我欣喜若狂。我决定也折腾个独立站点。
+...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>December 15, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-12-15-shan-wang-chu-zhong/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>崇明岛1/4骑行</h2>
+  </header>
+  <section class="entry-content">
+   <p>抽出了国庆长假中的两天，准备去所谓的中国第三大岛转转。
+第一天早上，坐车穿过长江大桥，浓雾下透视窗外。
+第二天的早上，沿渠小道，悠远而神秘。
+蓝天，枯树、黄稻，完美的“Z”字型。
+继续前行，至中午，天蓝云粹，开阔视野爽爆双眼。
+忍不住再框一张。
+下午，至西沙湿地，芦苇海洋中瞥见一亭。傍晚颜色和早上的颜色是呼应的呢！...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>October 3, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-10-03-chong-ming-dao-1-4-qi-xing/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>离奇梦境一则</h2>
+  </header>
+  <section class="entry-content">
+   <p>梦，可以比小说更荒诞，比电影更有3D感。
+在梦中，月球离我很近，仅仅隔着一个台阶，它像是被外来生物操控的座驾，朝我飞旋而来，我躲在台阶之后，看着它在眼前盘旋，突然，它炸掉了。
+场景切换到楼顶，我被坏人一脚踢飞，队友仍和他战斗。画面再切，我俩双双中弹。我感觉我就快醒了！然后果然醒了，有人拿着针管给我注射了一剂药水，告诉我说，这个可以增强你的警惕性，微眯双眼即可激活本技能，我试了一下，果然！
+咻！画面再切，我旁边是高中女同桌，但是她却穿着职业装和我一同坐在教室里听课，讲课的居然是我的大学老师。她让我们赶紧构思一个Loop画面，而我只是搂着女同桌在悄悄耳语。...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>July 20, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-07-20-li-qi-meng-jing-yi-ze/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>夏雨一周</h2>
+  </header>
+  <section class="entry-content">
+   <p>到厦门一周了，一切都好，风清气爽，秀色可餐。
+不妙的是我们似乎挑错了季节，雨一直下，颠覆了我原本对厦门的想象。
+背过来的夏装根本没机会露脸，随身的一件春季夹克倒是救了我。
+第一天刚到客栈，顾不上舟车劳顿的我们去海滩边走了一趟。
+卷起裤管光着脚丫踩在沙滩上的感觉不赖，尤其是细沙上。
+海风很大！吹得人直哆嗦，夹紧身子的我对沙滩上坦肩露背拍婚纱照的新娘子们由衷佩服。
+义工每天的任务是给房间换床单&#43;打扫卫生&#43;其他。
+因为是周一到的，刚好赶上退房高峰期，累得要死，还好心很嗨皮。
+老板是退伍军人，第一天一起吃饭恰巧战友来访，听他们侃部队里的故事：特种兵，野外训练，退伍当打手，帮政府拆迁，给企业当讲师。。。各种传奇，津津有味。
+店长是一名憨厚的福安人，是以前老板带过的兵，为人随和仗义。粗活累活抢着干，尽管他是店长。值得尊敬。
+我们特别聊的来，后来才发现原来我们的生日居然是同一天。
+这几天干活很累，干活的过程中我还突然发现个问题。
+同样是包吃包住，我们却总是不领爸妈的情；
+但是在外面，人家就给个三餐一宿，我们就心甘情愿屁颠屁颠跑前跑后。
+唉！
+想到这里我赶紧给家里打了个电话，跟他们探讨这个贱贱的发现。...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>March 31, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-03-31-xia-yu-yi-zhou/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>穿越革命根据地</h2>
+  </header>
+  <section class="entry-content">
+   <p>早上9点半上的火车，从湘潭到厦门是一条来回倒腾的路线，需耗时21小时。
+我买的卧铺，上铺。
+每次睡上铺我都忍不住要吐槽一下床位的设计。
+下铺最方便舒坦，高空间，有桌，靠窗，可坐可卧可荡腿。
+上铺最憋屈，上下难，空间小，翻身都得扶着掖着慢慢挪。
+中铺介于两者之间。
+真是连上下铺的好坏都两极分化，不好。
+对面下铺是一位年轻的少妇，黝黑的皮肤配上姣好的面容，一点都不违和，让我想起吉克俊逸。她不时逗逗孩子，给孩子喂奶，这会儿正和隔壁床位的另一位少妇交流带孩子的心得。
+我知道睡不着躺在上铺难受的滋味，所以先在下面靠窗的座位上挨着看风景。
+旁边是一位正在打电话的生意人。你听。
+“哎，好好好。。。这个基因是查不到的。。。嗯嗯嗯，客源可以追踪的。。。你可以做个易拉宝放在门口。。。”
+我猛地打量这男的，矮，胖，平头，穿的倒端正。
+这做什么生意的啊，我心一紧，一股想上厕所的冲动，心紧就这样。
+去洗手间的路上我一直琢磨，联想到网上贩卖胎盘的新闻，但没这么大胆的呀！还做易拉宝！
+回来后，他电话已经打完，在玩手机。
+我想继续听他的电话，等了好久，每当我坐不住想起身的时候，好奇心就把我摁下来。
+后来，后来没再听到他打电话。。。
+再晚点的时候，我下铺来了个大爷，话少，一来把随身听往旁边一挂，一躺，传来的竟然是周杰伦的歌声。
+旁边一奶奶在给邻座讲知青故事，讲她们那时候对毛主席的崇拜，和对习老大上任后单位的一些改观。
+我听了一耳朵，然后爬上床睡去了。...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>March 31, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-03-31-chuan-yue-ge-ming-gen-ju-di/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/">← Prev Page</a>
+    <a class="next" href="/page/3/">Next Page →</a>
+  </nav>
+</footer></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

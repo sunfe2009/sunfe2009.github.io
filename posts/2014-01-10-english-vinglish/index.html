@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>救救菜英文 - 莫奈如一</title>
+    
+    <meta name="description" content="最近看的几部印度电影让我对这友邦颇生出几分好感，想象力和启示意义都甩开天朝几条街，“大规模集体舞 ”早就不再是阿三电影的唯一标签了。
+
+之前看过的《Eega》（功夫小蝇）和《Oh my god》（偶滴个神啊），就觉得很不错，他们就是能在大框架下很好的拿捏着笑点和泪点。不过印度电影虽然偶有惊喜，但是有个很大的副作用，听完他们讲英语之后，需要配合2个小时的奥巴马致辞和一宿的睡眠才能治愈。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">救救菜英文</h1>
+    <div class="post-meta">January 10, 2014</div>
+  </header>
+  <div class="post-content"><p>最近看的几部印度电影让我对这友邦颇生出几分好感，想象力和启示意义都甩开天朝几条街，“大规模集体舞 ”早就不再是阿三电影的唯一标签了。</p>
+
+<p>之前看过的<a title="" href="http://movie.douban.com/subject/11499033/" target="_blank" rel="noopener noreferrer">《Eega》（功夫小蝇）</a>和<a title="" href="http://movie.douban.com/subject/19945757/" target="_blank" rel="noopener noreferrer">《Oh my god》（偶滴个神啊）</a>，就觉得很不错，他们就是能在大框架下很好的拿捏着笑点和泪点。不过印度电影虽然偶有惊喜，但是有个很大的副作用，听完他们讲英语之后，需要配合2个小时的奥巴马致辞和一宿的睡眠才能治愈。</p>
+
+<p>昨天又看到这部在内地被译作《印式英语》，台湾译作《救救菜英文》（翻译的真贴地气）的<a title="" href="http://movie.douban.com/subject/10876425/" target="_blank" rel="noopener noreferrer">《English Vinglish 》</a>。</p>
+
+<p>最大的感受有两点：</p>
+
+<p>1、至亲更需要尊重和鼓励；</p>
+
+<p>看到莎希因为被女儿和丈夫嘲笑瞧不起，而极度郁闷。我想起了自己也经常犯类似的错误——经常在我妈问我问题时，以一句“哎呀！别问了，说了你也不懂！”塞回去。我现在想起我妈当时或笑或面无表情的反应都不禁鼻酸，我不曾想到竟会有这样的伤害。</p>
+
+<p>另外，我也想起了小时候的一件事。小学时，有一次拿着学校发的材料做模型，做不出来，我爸说“就你这样还说想当发明家呢？”。好久好久我都没能忘记我爸说那句话时的表情，好久好久我都为自己不够聪明做不了发明家而苦恼，以至于后来所有的和“理想”相关的作文，我都不太敢写。</p>
+
+<p>往往因为是至亲，我们就口无遮拦，忽视了彼此本能最需求的鼓励和尊重；殊不知正因为是至亲，我们潜意识里把彼此的评断认为是真的。</p>
+
+<p>嗯，我以后有孩子了一定要经常鼓励他们。</p>
+
+<p>2、改变到底还是要靠自己的；</p>
+
+<p>莎希如果不去学英语，她的尴尬处境势必还要继续下去。在我们的缺点被人包容时，我们应该感到庆幸。但反过来说也是不幸的，会让人看不清自己，不思改进，直到有一天，我们的不足被另一撮人（往往会是很大一撮）拿来无情指摘。这时候要求别人包容理解是不切实际的，努力完善自己的不足才是最根本的解决办法。</p></div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://sunfe2009.github.io/tags/%E5%8D%B0%E5%BA%A6">印度</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E5%8D%B0%E5%BC%8F%E8%8B%B1%E8%AF%AD">印式英语</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E7%94%B5%E5%BD%B1">电影</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

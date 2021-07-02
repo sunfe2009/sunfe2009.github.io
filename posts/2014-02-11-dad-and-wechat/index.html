@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>爸妈的移动时代 - 莫奈如一</title>
+    
+    <meta name="description" content="移动时代，人手一机，爸妈也不例外，但他们往往只用了智能手机的上古功能，诸如：打接电话、拍照听歌，却把智能手机的可扩展性撂在一旁，实在是暴殄智能！
+
+作为社会主义新青年，我不忍看到任何资源不被有效配置，于是只要逮住机会，我就会竭力鼓吹各种新兴应用的高效便捷。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">爸妈的移动时代</h1>
+    <div class="post-meta">February 11, 2014</div>
+  </header>
+  <div class="post-content"><p>移动时代，人手一机，爸妈也不例外，但他们往往只用了智能手机的上古功能，诸如：打接电话、拍照听歌，却把智能手机的可扩展性撂在一旁，实在是暴殄智能！</p>
+
+<p>作为社会主义新青年，我不忍看到任何资源不被有效配置，于是只要逮住机会，我就会竭力鼓吹各种新兴应用的高效便捷。</p>
+
+<p>终于在我爸再一次抱怨他的套餐<strong>短信不足，流量有余</strong>的时候，采取强制性措施给他注册并安装了微信，并添加了我和我姐为联系人。然后手把手教他如何从通讯录里发起会话，如何实时对讲和视频聊天。终于，在从手机里看到鲜活的对话视频并反复确认不会产生多余的费用后，他老人家的嘴角终于轻轻上扬。</p>
+
+<p>为了更大程度上巩固战果，增强他对微信的粘性，我又向他演示了如何使用扫一扫添加联系人，以及扫描商品条码比价的功能。同时精选了几个微信公众账号给他。</p>
+
+<p>腾讯新闻（微信自带），相当于是为了以后爷俩打电话培养话题；</p>
+
+<p>参考消息（ID：ckxxwx），我爸老愤青一枚，偏爱这类军事国际新闻；</p>
+
+<p>活法儿（ID：huofar），比较靠谱的养生类信息，总比他们从别人口中听说的要靠谱；</p>
+
+<p>快递100（ID：ikd100），以后查快递就方便多了；</p>
+
+<p>耒阳社区，本市的一些资讯和黄页查询；</p>
+
+<p>个把小时后，他终于可以熟练使用刚刚给他演示的所有功能，并承担了向我妈普及微信的义务。</p>
+
+<p>过了一会儿，我爸拿着手机过来问我，“这个摇一摇是干嘛的啊？”</p>
+
+<p>“哦，这个啊，也没啥用，还挺耗电的，来，我帮你删掉！”</p>
+
+<p>于是我在功能里把摇一摇、漂流瓶、附近的人都禁用了（为了他老人家的身心健康），顺带把朋友圈也禁用了（为了我的朋友圈）。嗯，我坚信，小时候父母有义务为我们把关，现在我们有义务为他们把关。哈哈哈哈哈&#8230;</p></div>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

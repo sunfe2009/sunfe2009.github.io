@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>上海的夏湘潭的冬 - 莫奈如一</title>
+    
+    <meta name="description" content="到上海差不多170天了，时间过的真快，烧烤模式转眼切换到冰箱模式。
+
+夏天的时候我就觉得上海人民在气候这个问题上，是没有见过世面的，就这点高温就大呼小叫受不了了？好歹还有点风吹在身上啊！要知道，这种气候在湘潭简直算得上春天了！！湘潭的夏天几乎是没有风这个概念的，每一天都是极闷的，跟顶着一个锅盖子似的。今年夏天新闻报道的一群人在天台睡“烧烤”觉的就是我们隔壁学校的，这么说吧，女汉子在寝室都是光着膀子的。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">上海的夏湘潭的冬</h1>
+    <div class="post-meta">December 17, 2013</div>
+  </header>
+  <div class="post-content"><p>到上海差不多170天了，时间过的真快，烧烤模式转眼切换到冰箱模式。</p>
+
+<p>夏天的时候我就觉得上海人民在气候这个问题上，是没有见过世面的，就这点高温就大呼小叫受不了了？好歹还有点风吹在身上啊！要知道，这种气候在湘潭简直算得上春天了！！湘潭的夏天几乎是没有风这个概念的，每一天都是极闷的，跟顶着一个锅盖子似的。今年夏天新闻报道的一群人在天台睡“烧烤”觉的就是我们隔壁学校的，这么说吧，女汉子在寝室都是光着膀子的。</p>
+
+<p>上海的冬天也没有湘潭冷。在湘潭的这个时候，我们应该已经裹上了两床被子，恨不得穿两件秋裤，而且我这个时候肯定已经生冻疮了。班上一个来自东北的同学都说这比她们那儿零下还冷。而在上海，我今天还没穿秋裤，冻疮也还没有发。当然，这也许和我早早的做了预防有关，因为之前就问过上海的同事这边的冬天如何，照他说，还是挺恐怖的。也许吧，也许这边的冬属于厚积薄发型。</p>
+
+<p>在湘潭，一年只有两季，夏和冬。我们甚至开玩笑说这大概是当年毛主席没有把首都定在这儿的原因吧！但不可否认的是，这么恶劣的环境是非常锻炼人的。我甚至想过，要是某一天我开公司了，招聘启事上一定要加上这么一条“在湘潭有4年以上过冬经验者优先”。</p></div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://sunfe2009.github.io/tags/%E4%B8%8A%E6%B5%B7">上海</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E5%86%AC%E5%A4%A9">冬天</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E5%A4%8F%E5%A4%A9">夏天</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E6%B9%98%E6%BD%AD">湘潭</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

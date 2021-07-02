@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>听君《一席》话 - 莫奈如一</title>
+    
+    <meta name="description" content="之前朋友强烈推荐过《一席》，一了解才知道原来是中国版的TED。看了几集觉得还不错，没有看TED那种距离感，毕竟故事就发生在脚下，而不是遥远的美国，所以故事更有存在感。现在还有印象的包括“乔小刀”那集和一个在香港的印度人Vivek那集。
+
+上个周末终于有机会去现场听了一次，感觉非常棒！原本以为会像视频里那样半个小时的样子就完了。去了才知道，每一次的《一席》会历经6个小时左右，从下午1点到晚上7点，而上个周末更是接近9点才结束。不过还好，作为一个传播“人文、科技、白日梦”的正能量团体，一席还提供了免费的水和食物。请你过来长姿势，看演出，开眼界，还管嘴，业界良心啊！">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">听君《一席》话</h1>
+    <div class="post-meta">December 19, 2013</div>
+  </header>
+  <div class="post-content"><p>之前朋友强烈推荐过<a style="line-height: 1.5;" href="http://yixi.tv/" target="_blank" rel="noopener noreferrer">《一席》</a><span style="line-height: 1.5;">，一了解才知道原来是中国版的TED。看了几集觉得还不错，没有看TED那种距离感，毕竟故事就发生在脚下，而不是遥远的美国，所以故事更有存在感。现在还有印象的包括“乔小刀”那集和一个在香港的印度人Vivek那集。</span></p>
+
+<p>上个周末终于有机会去现场听了一次，感觉非常棒！原本以为会像视频里那样半个小时的样子就完了。去了才知道，每一次的《一席》会历经6个小时左右，从下午1点到晚上7点，而上个周末更是接近9点才结束。不过还好，作为一个传播“人文、科技、白日梦”的正能量团体，一席还提供了免费的水和食物。请你过来长姿势，看演出，开眼界，还管嘴，业界良心啊！</p>
+
+<p>当天共有8名讲者，按出场顺序分别是</p>
+
+<p>1、木痴：海弟</p>
+
+<p>我猜他可能是中国最了解木头的年轻人，从他口中我得知了坤甸是一种通常用作龙舟的木材，因为密度比较大，可以更贴水，更稳。</p>
+
+<p>荷木&#8211;有斜纹，不容易砍，是一种烧火的好木料，但我百度发现它经常用来“防火”！可能是生木防火，干木利火吧！木工不敢打赤膊接近它，因为致痒，古人利用这个特点用来辅助杀鸡，取其木屑洒在家禽身上，然后痒死，典型的中国式智慧，典型的中国式残忍。</p>
+
+<p>2、音乐人：范宗沛</p>
+
+<p>来自台湾的音乐人，风趣幽默，活泼好动，一点都不像50岁的人。他用一连串旋律勾勒出了普通人一天的生活。</p>
+
+<p>从他口中我知道了白葡萄酒会让人高兴，愉悦；红葡萄酒会让人情绪往下走，会吐露心事。以后约会的时候知道怎么选了吧！</p>
+
+<p>3、外卖员：张旭豪</p>
+
+<p>他可不是一般的外卖员，“饿了么”网上订餐创始人。听了他们创业的故事，很有意思，于是我决定深入了解一下“饿了么”这个网站。！</p>
+
+<p>4、HAYA乐团——蒙古音乐，世界音乐</p>
+
+<p>黛青塔娜，主唱；全胜，马头琴；李伯希，吉他手；法国人，贝斯手；宝音，鼓手。现场听这种灵魂音乐真的很震撼，好像天灵盖都被揭开了，然后旋律自己灌进去。这是现场的图片。</p>
+
+<p><img class="alignnone" alt="" src="http://i1086.photobucket.com/albums/j445/sunfe2009/blopic/haya.png" width="916" height="598" /></p>
+
+<p>5、考古学家</p>
+
+<p>真对不起这位叔叔，因为实在提不起兴趣，没怎么听，抽空出去上了个洗手间。</p>
+
+<p>6、3D打印</p>
+
+<p>器官，医学科技，第一次这么近距离接触高科技，什么器官移植啊，长生不死啊，原来未来已经这么触手可及了！他们已经吃过自己<strong>打印出来的肉</strong>了！！</p>
+
+<p>7、曹操DNA</p>
+
+<p>还记得之前的新闻吗？<a href="http://news.sina.com.cn/c/2013-11-11/151628679191.shtml" target="_blank" rel="noopener noreferrer">复旦公布曹操家族DNA：非夏侯氏抱养</a> 项目负责人讲述了他们怎样测出了曹操家族的DNA，并认为人类的祖先可能并非只是黑猩猩这么简单，言下之意，你懂的，但他没有点破。</p>
+
+<p>8、绘者：熊亮</p>
+
+<p>绘画艺术家，现专注于儿童绘本。他的很多绘本都是画完多年之后才得以出版的，因为当时不被人接受，理念不被这个时代认可其实是很痛苦的，一般人通常会放弃，但他坚持下来了。也许这就是艺术家和非艺术家的区别吧！</p>
+
+<p>里面给我感触最深的就是海弟和熊亮了，他们的故事让我确切的明白了一个道理。那就是，<strong>你热爱的任何东西都会在后来的日子里拯救你的生活</strong>。</p></div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://sunfe2009.github.io/tags/ted">TED</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E4%B8%80%E5%B8%AD">一席</a></li>
+      <li><a href="http://sunfe2009.github.io/tags/%E4%B8%8A%E6%B5%B7">上海</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

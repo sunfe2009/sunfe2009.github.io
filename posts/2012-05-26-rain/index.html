@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Rain - 莫奈如一</title>
+    
+    <meta name="description" content="离“被盗事件”也有两周时光了，早觉得有写点什么的必要了，用来作为我事后“吃一堑，长一智”的佐证。
+Part1：钱财层面上的损失固然让人心痛，却远不及生活习惯被剥离后的内心拉扯。原本被填的踏踏实实的生活，嗖的一下被抽去一空，一段空白接着一段更大的空白，每一分钟都排着队过来嘲笑你，“你这瘾君子，叫你把生活都寄托在她身上。。。”
+Part2：向来都是这样，面对突如其来的无法改变的黑天鹅事件，除了淡然接受又能如何？人前我表现的好像丢的电脑不是自己的，瞬间瓦解朋友们酝酿好的关心和同情，并暗自收集起来聊以慰藉。哈哈，这个阶段是幸福而满足的。
+Part3：恋物癖自有恋物情，陪伴经年，日夜碰触的物品必定早已有了她的第二重身份——“情人”，偏好喜恶尽在她掌握之中。即使现在拥有着“临时替代品”，但每次循着相同的名称、相同的文件夹，双击之后的失望都将惊动浮在脑海的记忆冰块，泛起酸楚的甜蜜涟漪。
+Part4：就像国家号召产业多元化以避免金融危机带来的整体撼动，生活也应该多元化，单一的生活内容太容易受到波及，过份的依赖于一种嗜好势必会增加毁灭生活的风险，好吧，神不隆冬地说的有点严重了。
+Part5：未雨绸缪永远都是必要的，倘若料到今天，我们当初是否会对保险箱推销员的劝说有丝毫犹豫；倘若在脑海中有进行过“被盗”预演，我们是否仍然在警察来后毫无举措时面面相觑，而不是提出封锁出口，挨户排查，调看录像······（当然啦，我更愿意说这是警察的不作为）；倘若我的电脑资料有经常备份，我是否可以更轻松的走出阴影而不带过多遗憾。
+没人愿意相信不幸的事会发生在自己身上，甚至会把这种“相信”当作是对自己的诅咒。未雨绸缪的事在发生之前的确更像是杞人忧天，却不知有一种悲观叫做乐观。">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Rain</h1>
+    <div class="post-meta">May 26, 2012</div>
+  </header>
+  <div class="post-content"><p>离“被盗事件”也有两周时光了，早觉得有写点什么的必要了，用来作为我事后“吃一堑，长一智”的佐证。</p>
+
+<p>Part1：钱财层面上的损失固然让人心痛，却远不及生活习惯被剥离后的内心拉扯。原本被填的踏踏实实的生活，嗖的一下被抽去一空，一段空白接着一段更大的空白，每一分钟都排着队过来嘲笑你，“你这瘾君子，叫你把生活都寄托在她身上。。。”</p>
+
+<p>Part2：向来都是这样，面对突如其来的无法改变的黑天鹅事件，除了淡然接受又能如何？人前我表现的好像丢的电脑不是自己的，瞬间瓦解朋友们酝酿好的关心和同情，并暗自收集起来聊以慰藉。哈哈，这个阶段是幸福而满足的。</p>
+
+<p>Part3：恋物癖自有恋物情，陪伴经年，日夜碰触的物品必定早已有了她的第二重身份——“情人”，偏好喜恶尽在她掌握之中。即使现在拥有着“临时替代品”，但每次循着相同的名称、相同的文件夹，双击之后的失望都将惊动浮在脑海的记忆冰块，泛起酸楚的甜蜜涟漪。</p>
+
+<p>Part4：就像国家号召产业多元化以避免金融危机带来的整体撼动，生活也应该多元化，单一的生活内容太容易受到波及，过份的依赖于一种嗜好势必会增加毁灭生活的风险，好吧，神不隆冬地说的有点严重了。</p>
+
+<p>Part5：未雨绸缪永远都是必要的，倘若料到今天，我们当初是否会对保险箱推销员的劝说有丝毫犹豫；倘若在脑海中有进行过“被盗”预演，我们是否仍然在警察来后毫无举措时面面相觑，而不是提出封锁出口，挨户排查，调看录像······（当然啦，我更愿意说这是警察的不作为）；倘若我的电脑资料有经常备份，我是否可以更轻松的走出阴影而不带过多遗憾。</p>
+
+<p>没人愿意相信不幸的事会发生在自己身上，甚至会把这种“相信”当作是对自己的诅咒。未雨绸缪的事在发生之前的确更像是杞人忧天，却不知有一种悲观叫做乐观。</p>
+</div>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>莫奈如一</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="http://sunfe2009.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/style.css" rel="stylesheet">
+    <link href="http://sunfe2009.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="http://sunfe2009.github.io/apple-touch-icon.png">
+    <link rel="icon" href="http://sunfe2009.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.84.3" />
+    
+    <link rel="alternate" type="application/rss+xml" href="http://sunfe2009.github.io/index.xml" title="莫奈如一" />
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="list home">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <h1 class="logo"><a href="http://sunfe2009.github.io/">莫奈如一</a></h1>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">All posts</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>站住，厦门</h2>
+  </header>
+  <section class="entry-content">
+   <p>有一种东西，你一盯着它，它就慢下来。你稍不留神，它就窜走了。
+我想你应该知道那是什么。
+一条条被班干部发到手机里的有关就业的信息时刻提醒着我，大学要结束了。
+结束就结束呗，我心里倒也不着急。不就是找工作么，在学校里待了16年，早想出去了。
+和几个朋友约好一起去魔都闯闯，我对大都市有天然的向往。尤其觉得自己的年轻时候应该在那里度过，毕竟也没吃过什么苦，所以不怕。
+前些日子，和一高中女同学通电话，得知她要结婚了。有点意外，印象中她是那种文艺女，以为会晚婚的，没想到才实习半年就进了围城。
+这么年轻！我觉得可惜。
+这件事给我触动很大，让我几乎怀疑自己是否还算年轻。
+按照我校习俗，大四下学期学生是要去实习的，如果没挂科的话。
+我上学期一口气挂了俩，同一个老师的俩门课。
+教务处安排考试的老师也是坑的一手好爹，补考时间不仅安排的晚，还把两门课之间叉开了一个礼拜，愣是把我留到了现在。
+毕业设计要等到5月，离这中间还有个把月。
+的空闲时间！
+自由太多的时候，人就会琢磨怎么花。
+于是，一系列想法新鲜出炉。
+我先是去剃了个光头。
+作为一个男生，我也经常被说“剪了跟没剪”一样。
+这一次，还没人这么说过。
+光头是一次体验，还不赖。你可以从四个方面感受到不同。
+1、别人的眼光，熟人的和陌生人的；
+2、洗头的频率，洗发水好经用啊；
+3、和大自然的接触，清风拂过，灌入每一个毛囊，咝~
+4、你对头型的想象，我一直以为自己是方头，没想到圆得这么厉害。
+试着学一种乐器。
+突然觉得人一辈子要是连一种乐器都不会把玩实在悲哀。
+什么东西既能培育生活情趣，又能方便携带随处卖弄呢？
+我买了一把布鲁斯口琴。
+正在练习中。
+另外，我打算出去穷游了。
+在厦门联系了一家旅馆，会在那边做一个月的义工。
+明天出发。...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>March 23, 2013</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2013-03-23-zhan-zhu-sha-men/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>我很尊重开卷</h2>
+  </header>
+  <section class="entry-content">
+   <p>唉，生活了无趣味。
+最近，能算得上事儿的，除了刚刚结束不久五年一遇的18大，就数今天的开卷考试了。
+开卷考试，在我们广告系，可是四年一遇啊！
+开卷考试，一场考生间誊抄速度和翻书技巧的无情对决，一次对考生心态和智慧的终极考验。
+为了迎接这一天，我已经做好了十足的准备，那就是不-准-备！
+因为潜意识里，“开卷必须裸考 ”和“闭卷必须复习 ”一样不可辩驳。
+不过要知道，这对于一个四年来一直致力于拿奖学金而从未得逞的我意味着什么，这意味着大学里最后一次拿奖学金的机会变成一场冒险！
+呵，不过，人生，不就是一场冒险吗~
+今天10点开考，我今早1点睡下，设闹铃为7点，以便我有足够的时间积蓄起床的意志，最终花了1.5个小时挣脱被窝，这项数据平时大于等于2。
+洗簌完毕后，作为对那垛复习资料的尊重，我粗略的瞄了一下目录，并在我的复习圣地——厕所，完成了对课程纲要的最后理解消化。
+当我掐好时间，于9点57分从容步入考场时，发现监考老师早已按捺不住发完试卷进入闲聊阶段了，尼玛能不能尊重一下四年一遇的开卷啊！
+迟到的我走向唯一的空位，坐下，嘴角上扬，环顾四周，期望给战友们送出我鼓励的眼神，毛，根本没人看我。
+像往常一样，我浏览了一遍试卷，开始答题。因为脑海中已经刻下了目录图，所以基本上只要按图索骥，仅有稍许紧张。
+名词解释，28分，找到4题，砍下16分！
+简答题，24分，找到3题，拿下18分！
+修改题，16分，不会，放弃！
+计算题，8分，收入囊中！
+操作及主观题，32分，保守估计截下16分！
+哦耶！58到手，及格无忧！
+再一次，嘴角上扬，环顾四周，企图给困难户施加心理压力，毛，依旧没人看我。
+接下来的时间，我只是轻松的翻着资料，看能不能把剩下的几个漏网之鱼捞上来。
+由于心态的转变，我的耳朵开始放松过滤机制，噪音越来越大，没错，监考老师们已经聊High了！
+当时好想吼一句：“请注意考场秩序！”
+四年一遇的开卷唉，你们聊，那是对开卷的不尊重，你们倒是认真监考啊！
+每学期都有的闭卷，你们不聊，那是对兢兢业业的舞弊勇士的不尊重！
+尊重啊！呜呼，师道不存呐！
+数分钟后，我完成了答卷。
+但是出于对比答题比我早的同学的尊重，我不打算第一个走出考场，那太不厚道了。
+终于，在憋足了整整1140秒，目睹了3位同学陆续交卷后，我踏着轻快的步伐迈出了考场。
+嗯，那是一种仰天大笑出门去的感觉~...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>November 24, 2012</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2012-11-24-wo-hen-zun-zhong-kai-juan/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>在那遥远的地方</h2>
+  </header>
+  <section class="entry-content">
+   <p>很经典的一首歌，多年来，一直被众多的歌手演绎，这里贴上几个有代表性的版本。
+
+个人比较喜欢莫文蔚翻唱的，另外，王力宏和c.k版本的也颇具代表性，不过虾米上没有资源~
+第一次听到这首歌是在电视剧《血色浪漫》里，那时候还小，不是很懂当中意味，但它独特的旋律和饱含的情感驱使我去了解了它，然后在耳朵里刻下了烙印。
+前段时间在读《平凡的世界》时，又看到里面提到了它。今天，偶然在路上听到有流浪歌手在演唱这首歌。
+于是，我决定去探索一下这首歌背后的故事。
+原来，这首歌来自“西北歌王”王洛宾之口，没错，正是和三毛有过一段恋情的那位歌者。
+歌中那“遥远的地方”究竟在哪里？传说中的卓玛是否如歌中所唱的那样美丽？ 轻轻一鞭，打出不朽之作
+王洛宾在青海湖畔参与拍摄《祖国万岁》，与扮演影片中牧羊女的萨耶卓玛相识。
+王洛宾在电影世界里过了3天真正的牧羊人生活。
+此时，卓玛正是情窦初开的17岁少女。她头发梳成了十多条小辫披在身后，两只大眼睛闪射着大胆而炽烈的光芒，被公认为当时青海湖畔最美的姑娘。
+王洛宾和卓玛被安排同骑在一匹马上，王洛宾起初很拘谨，坐在卓玛身后，两手紧紧抓着马鞍。卓玛却对此毫不理会，忽然纵马狂奔，王洛宾一时不防，本能地抱住了卓玛的腰。卓玛狂驰了很久，在那大草原上，这才把马缰交在王洛宾手中，靠在他的怀里，不再撒野。
+黄昏牧归，卓玛将羊群轻轻点拨入栏，夕阳下的卓玛亭亭玉立，晚霞的余辉映照出卓玛的侧影……王洛宾痴痴地看着被晚霞浸染了全身的卓玛。卓玛感觉到他的眼神，她转过身去，拴好羊栏，那张徘红的脸对着王洛宾——一个26岁的 汉族青年。
+卓玛眼中跳出了火苗，举起手中的牧鞭，轻轻打在王洛宾身上，然后返身走了。 王洛宾依旧木然地站在栅栏旁，痴痴地望着消失在夜幕中的卓玛，轻抚着被卓玛打过 的地方。这个俏皮、美丽又奔放的藏族姑娘，在他身上留下了永生难忘的一鞭。
+王洛宾徘徊在卓玛父亲的帐房外，毡窗落了下来，将那千户长的女儿和这位汉族音乐 家分隔在两个世界里。 第二天清晨，电影队离开了青海湖，要回到西宁去。卓玛和她的父亲骑了马，一程又 一程地送，直到在一个小坡上，方才停住了。
+王洛宾骑在骆驼上，不住地回头张望，随着驼峰起伏，驼铃叮略，王洛宾心中的情感，化为词曲，借助哈萨克民族的曲调唱出了不朽之作《在那遥远的地方》： “在那遥远的地方，有位好姑娘；人们走过她的帐房，都要回头留恋地张望。” “她那粉红的笑脸，好像红太阳，她那美丽动人的眼睛，好像晚上明媚的月亮。” “我愿抛弃了财产，跟她去放羊；每天看着她迷人的眼睛和那美丽金边的衣裳……”...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>August 9, 2012</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2012-08-09-xuan-lv-gu-shi-zai-na-yao-yuan-de-di-fang/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>自古美人叹迟暮，不许英雄见白头</h2>
+  </header>
+  <section class="entry-content">
+   <p>实习以来一直比较忙，所以对奥运也没怎么关注，只是事后看看媒体头条。
+不过始终留了个心眼在刘翔身上，今天下午本来要看直播的，无奈公司用的是香港网络，打开的视频直播网站都用一句“仅供中国大陆使用”温柔的拒绝了我。这让我很是困惑，不让我朝百姓看资本主义的视频网站我虽不能接受但还能理解，而我朝的网站不让别人看我就着实摸不透当局的初衷了？再看看YOUKU的广告语，我就更无语了。。。“优酷，全世界都在看”
+最终没有看成直播，只能凑合着看看微博，不知道哪一次刷新后看到了“摔倒”的图片，心里咯噔一下，还以为是假的，抱着美好的期望一边按F5一边在心里祈祷一边咒骂无良的网络直播服务。直到看到腾讯稍后的弹窗，我才相信了这个事实。
+也许是因为整个知道的过程比较缓慢，所以内心一直挺平静的。然而，再刷微博就开始发现大量冷嘲热讽的段子出来了，甚至很多人已经开始甩开腮帮子开骂了！说人家装，是影帝云云。。。。于是我心里就不淡定了，想跟他们据理力争，甚至直接对骂上几句，不过我理智的说服了自己，我一个大学生，怎能跟他们一般见识，况且我还不了解具体情况，只能扫兴的关掉微博。
+下班回来后，我第一件事就是找完整的视频回顾一下现场，看到刘翔单脚奔向最后一栏时的表情，感性的我不禁湿了眼眶。
+当然，看到更多的还是祝福刘翔和为其辩护的，人家几年磨一剑，为民族荣誉而战，有些人花几秒钟瞄一眼后就把自己打扮成言语刻薄的批评家，真不知该说他们什么好！
+08年人家直接退赛，就有人跳出来说：“你就是蹦也要蹦到终点啊！ ”今天人家蹦到终点了，又有人跳出来说：“你装，影帝！ ”也不知道是不是同一帮人？！
+残酷的现实告诉我们，一旦阴谋论者设定好自己的角色并准备好檄文时，我们做什么都阻止不了~...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>August 7, 2012</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2012-08-07-zi-gu-mei-ren-tan-chi-mu-bu-xu-ying-xiong-jian-bai-tou/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>不要见怪，不要见外</h2>
+  </header>
+  <section class="entry-content">
+   <p>《平凡的世界》，一本2年前就到我手上的书，慑于其百万字的篇幅，一直没勇气静下心来看，好几次翻了几章就又丢到一旁了。
+因为书里写的都是些遥远年代的事，和今天的生活毫不相干，所以我丝毫提不起兴趣。
+本以为它将注定成为书架上的一个陈列，以后也不会碰它。
+放假后整理书籍，本想把它直接压到箱底，却鬼使神差的翻开了它。
+一种很熟悉的感觉，是的，前面数十页我已经翻过好些遍了。
+密密麻麻的文字顿时让我心生困意，不过想起读者们对它的赞誉和推崇，我又努力说服自己看下去。
+于是，每天啃一点。今天终于看完了。
+此刻，脑海中不由自主的勾勒出了一些鲜活的形象，孙少平、田晓霞、孙少安、秀莲、润叶、少香、田福军，甚至还有那仅出现在金波回忆中的不会说汉语的藏族姑娘。
+孙少平，这位被命运枷锁套住的主人公，凭借书报打开的眼界和自身顽强的性格，每一步都磐石般坚定。另外，他也教会了我们，扭转命运的往往不是别人，而是自己的主动和热情。
+田晓霞，这个天使般的人物，多半是作者为了让故事不那么残酷而加进去的浪漫主义油星子，现实中大概不会存在。她和孙少平的不完满，应该是故事最大的遗憾。
+孙少安和秀莲，他们的生活轨迹，也许是传统意义上最真实最幸福的了。
+润叶，田家的另一个天使，对自己的不忠诚，几乎毁掉了她一辈子的幸福。
+少香，懂事的她是这个平凡的故事里唯一让人欣慰的角色，她承载着少安和少平的梦。
+田福军，哦，这绝对是我见过的最好的共产党员了！路遥先生你太主旋律了！
+金波和藏族姑娘，虽然篇幅极短，却让人印象极深，使我想起了《血色浪漫》里的钟跃民和秦岭。
+全书不论文笔还是构思，都极其平淡而普通，几乎是平铺直叙地向我们讲述了文革时期大背景下双水村孙田金几家人的故事。
+但看完后，却让人心里油然生出一种意犹未尽又心满意足的感觉。
+意犹未尽的是男主角孙少平的去路还没交待完作者就搁笔了，似乎只有这样开放式的结尾才能使故事不朽。
+但这恰恰又是让人无可挑剔心满意足的结尾，被生活重创的少平最终选择走向自认为属于自己的大牙湾，而不是接受金秀的爱情待在省城然后前程似锦。估计路遥先生也对这故事结局心存惋惜，据说他画上最后一个句号后的第一件事就是把圆珠笔扔出窗外。但他大概又是满意的，因为这样才算点明了“平凡”二字，而不至于落入HAPPY ENDING的俗套。
+最让人难忘的当属田晓霞那一句：“不要见怪，不要见外。”...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>July 24, 2012</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2012-07-24-bu-yao-jian-guai-bu-yao-jian-wai/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Mossight和我</h2>
+  </header>
+  <section class="entry-content">
+   <p>说在前面：
+当初Mossight刚出预览图时，就不由为之心动，从来不打算在主题上花钱的我甚至起了掏荷包的冲动。不久便看到沐歌的主题名称征集公告，说是采用即赠送。抱着试一试的态度，把自己的想法贴了上去。没想到中了！中标神马的就是有这种效果，即使没赢到什么，激动也是难免的，因为毕竟脱颖而出了，更何况获得了心仪的主题，为此我兴奋了一晚上。然而，乐极生悲，安装好Mossight的第二天，我被告知博客被开了什么后门程序，天晓得那是什么东西，据说是因为使用第三方主题感染上的，此后门可以让不怀好意的人随意进出拿取，也就是说甫出炉的Mossight很有可能从我这流出。我当即意识到问题的严重性，马上卸下Mossight并清理了WP。然后开始在网上搜如何重装并提高WP安全系数的信息。把数据备份到本地，清理完服务器，太困了就睡了，结果当晚电脑就被盗了。近一年的文字记忆全部丢失，一切不得不重新开始。
+名称释义：
+Mossight=Moss&#43;Sight
+Moss，并不是英国超级名模Kate Moss，而是它的本意：苔藓、地衣；
+Sight，也是取其本意：视角、景象、见解；
+于是，Mossight直译为“苔藓的视角”，就不难理解为“换个角度，发现生活，抒发见解”。
+使用感受：
+1、台前的
+概览：素雅的淡色系辅以清晰硬朗的直角，相得益彰。
+布局：传统的二栏缀以几个微创新：嘀咕栏（公告栏）、首页相册、侧栏收藏、侧栏幻灯、底部social box顿时让主题个性化了。
+文章格式：音频、视频、图像、状态，不同的文章就应该有不同的样子。
+底部：文艺感十足又不失厚重感，让人看着很舒服。
+2、幕后的
+在我看来，主题后台存在的意义就是让自定义可视化。要把主题使用者当代码白痴，让他们通过简单的“是”“否”选择题就可以轻松设定每一个“主题点”（所谓主题点就是制作者有用心考虑的设计点和功能点，比如首页相册、比如侧栏收藏、比如公告栏）。而这个设置面板基本上做到了。
+3、小细节
+A、顶栏
+Mossight采用的是固定顶栏，这的确省去了从页面底部滑到顶部去找栏目菜单的麻烦，对大屏幕访客来说，这无疑很便捷，但扪心自问一下，我真的那么懒得动一下滚轮或鼠标手势？而对于垂直空间本来就很拮据的笔记本访客来说，浏览内容时碰到个图片甚至都不能看个全局，优势的水平宽屏变成了劣势的垂直窄屏。
+看到上面这个数据，就知道垂直空间关乎大部分人的浏览体验。对于没有使用chrome者更甚。
+我是笔记本，深知此苦，于是把fixed改成了absolute，但手改代码哪有原装开关来的爽快。
+B、公告栏
+之前看到很多国外的主题都有只小鸟站在那里，引用最近的一次推文，就感觉蛮不错的。看到Mossight的这个设计我很是欣喜，不过竟然不是引用，而是每次都要登录后台，挺麻烦的。于是我试着把饭否的代码填入公告栏里面，果然可以。而且，那张小头像完全可以改成本地上传，这对于使用了多说等第三方评论工具的人来说，省去了去avatar加载头像的时间，对于使用了内置的avatar评论功能的也不损失什么。国内加载大概比avatar加载要快一些吧！
+C、Find Icon
+底部的Find Icon精致而特别，颇具创意。但放置在底部本来就很不明显，加之要看到那暗暗的find me字样或者不小心鼠标滑过social box闪一下更成了小概率事件。本来花了不少心思设计意在延伸关系触角的social box，如果没被发现，岂不是成了沉默成本，实在可惜。
+D、短代码
+要是集成在编辑箱里就好了。
+当然啦，建议从来都只是建议，不是要求。
+主题论坛
+专门为某款主题开辟论坛，这在国内实属罕见，不！大概是首例！
+萝卜白菜各有所爱，即使都爱白菜，也偏个酸辣咸淡，所以任何一款产品都不可能满足所有使用者贪婪而苛刻的心意。主题如衣服，穿衣追求个性化总不为过吧！于是，主题论坛有了存在的必要性，给使用者一个交流圈，让折腾鬼们互帮互助去吧！也方便了统一解决些同样的问题，无疑是社会主义资源配置效益最大化的表现！
+Mossight的那个门和这个门...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>July 20, 2012</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2012-07-20-mossight-he-wo/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Rain</h2>
+  </header>
+  <section class="entry-content">
+   <p>离“被盗事件”也有两周时光了，早觉得有写点什么的必要了，用来作为我事后“吃一堑，长一智”的佐证。
+Part1：钱财层面上的损失固然让人心痛，却远不及生活习惯被剥离后的内心拉扯。原本被填的踏踏实实的生活，嗖的一下被抽去一空，一段空白接着一段更大的空白，每一分钟都排着队过来嘲笑你，“你这瘾君子，叫你把生活都寄托在她身上。。。”
+Part2：向来都是这样，面对突如其来的无法改变的黑天鹅事件，除了淡然接受又能如何？人前我表现的好像丢的电脑不是自己的，瞬间瓦解朋友们酝酿好的关心和同情，并暗自收集起来聊以慰藉。哈哈，这个阶段是幸福而满足的。
+Part3：恋物癖自有恋物情，陪伴经年，日夜碰触的物品必定早已有了她的第二重身份——“情人”，偏好喜恶尽在她掌握之中。即使现在拥有着“临时替代品”，但每次循着相同的名称、相同的文件夹，双击之后的失望都将惊动浮在脑海的记忆冰块，泛起酸楚的甜蜜涟漪。
+Part4：就像国家号召产业多元化以避免金融危机带来的整体撼动，生活也应该多元化，单一的生活内容太容易受到波及，过份的依赖于一种嗜好势必会增加毁灭生活的风险，好吧，神不隆冬地说的有点严重了。
+Part5：未雨绸缪永远都是必要的，倘若料到今天，我们当初是否会对保险箱推销员的劝说有丝毫犹豫；倘若在脑海中有进行过“被盗”预演，我们是否仍然在警察来后毫无举措时面面相觑，而不是提出封锁出口，挨户排查，调看录像······（当然啦，我更愿意说这是警察的不作为）；倘若我的电脑资料有经常备份，我是否可以更轻松的走出阴影而不带过多遗憾。
+没人愿意相信不幸的事会发生在自己身上，甚至会把这种“相信”当作是对自己的诅咒。未雨绸缪的事在发生之前的确更像是杞人忧天，却不知有一种悲观叫做乐观。...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>May 26, 2012</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/posts/2012-05-26-rain/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2></h2>
+  </header>
+  <section class="entry-content">
+   <p>...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>January 1, 0001</time>
+  </footer>
+  <a class="entry-link" href="http://sunfe2009.github.io/_tags/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/page/2/">← Prev Page</a>
+  </nav>
+</footer></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://sunfe2009.github.io/">莫奈如一</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="http://sunfe2009.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+
