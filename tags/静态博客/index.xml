@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>静态博客 on 莫奈如一</title>
-    <link>https://sunfe2009.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://morelight.one/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 静态博客 on 莫奈如一</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Feb 2020 20:23:30 +0800</lastBuildDate><atom:link href="https://sunfe2009.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Feb 2020 20:23:30 +0800</lastBuildDate><atom:link href="https://morelight.one/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go With Hugo</title>
-      <link>https://sunfe2009.github.io/posts/go-with-hugo/</link>
+      <link>https://morelight.one/posts/go-with-hugo/</link>
       <pubDate>Tue, 25 Feb 2020 20:23:30 +0800</pubDate>
       
-      <guid>https://sunfe2009.github.io/posts/go-with-hugo/</guid>
+      <guid>https://morelight.one/posts/go-with-hugo/</guid>
       <description>缘起 一切都要从 21 世纪一〇年代的最后一个月说起。
 彼时，我正在为即将到来的 2020 年春节做出游计划，我和家人本来原本打算出国游玩，第一次尝试春节不在老家度过。
 我们本该在温暖的南国他乡，度过一段慵懒静谧的春节时光。
