@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Go With Hugo | 莫奈·如一</title>
+<link rel="shortcut icon" href="https://morelight.one/favicon.ico?v=1648449408414">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://morelight.one/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Go With Hugo | 莫奈·如一 - Atom Feed" href="https://morelight.one/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="缘起
+一切都要从 21 世纪一〇年代的最后一个月说起。
+彼时，我正在为即将到来的 2020 年春节做出游计划，我和家人本来原本打算出国游玩，第一次尝试春节不在老家度过。
+我们本该在温暖的南国他乡，度过一段慵懒静谧的春节时光。
+然后，元气满满..." />
+    <meta name="keywords" content="hugo,静态博客" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://morelight.one">
+  <img class="avatar" src="https://morelight.one/images/avatar.png?v=1648449408414" alt="">
+  </a>
+  <h1 class="site-title">
+    莫奈·如一
+  </h1>
+  <p class="site-description">
+    别创造，去记录。
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Go With Hugo
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-02-25
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://morelight.one/tag/KW8ERdZBR/" class="post-tag">
+                  # hugo
+                </a>
+              
+                <a href="https://morelight.one/tag/Ood-kXsQnR/" class="post-tag">
+                  # 静态博客
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="缘起">缘起</h3>
+<p>一切都要从 21 世纪一〇年代的最后一个月说起。</p>
+<p>彼时，我正在为即将到来的 2020 年春节做出游计划，我和家人本来原本打算出国游玩，第一次尝试春节不在老家度过。</p>
+<p>我们本该在温暖的南国他乡，度过一段慵懒静谧的春节时光。</p>
+<p>然后，元气满满地回到上海，开始新一年的工作。</p>
+<p>为此，我买了无人机和数码相机，准备记录下这一过程。</p>
+<p>然而，远在八百里开外的武汉，华南海鲜市场的一位食客，凭借着刁钻的舌头，悄然改变了这一切。</p>
+<p>于是，我现在坐在电脑前。</p>
+<p>这是疫情爆发后我居家隔离的第二阶段第 25 天。</p>
+<p>这段空闲时间，让我想起了很多之前因为时（lan）间（duo）落下的待办事项。</p>
+<p>其中就包括——重拾博客。</p>
+<p>于是就有了这个全新的网站和这篇文章。</p>
+<h3 id="经过">经过</h3>
+<p>动了念头之后，我前前后后花了近一周，测试了N个不同的静态生成器<a href="https://www.staticgen.com">StaticGen</a>， 最后 hugo 得到了我的临幸。</p>
+<p>不为别的，只是因为在所有静态生成器安装的过程中，只有 hugo 没出大错。“大错”的意思就是我通过谷歌也不能解决的问题。</p>
+<p>当然，hugo 过程中也碰到了不少难题。</p>
+<h4 id="难题-1从-wordpress-导入到-hugo">难题 1——从 WordPress 导入到 hugo</h4>
+<p>总之很麻烦，最终通过插件wordpress-to-hugo-exporter解决内容导出导入。</p>
+<h4 id="难题-2格式错乱">难题 2——格式错乱</h4>
+<p>由于之前在 WP 中用过第三方短码，导致输出混乱。好在我文章不多，通过全手工修整。（手酸）</p>
+<h4 id="难题-3图片无法显示">难题 3——图片无法显示</h4>
+<p>Markdown 格式没有错，但是图片就是无法显示，这个问题花的时间最长。</p>
+<p>原来是 hugo 最新的渲染引擎 goldmark  默认会过滤 HTML 标签，更换为旧版引擎 blackfriday 后解决。即在配置文件中添加</p>
+<blockquote>
+<p>[markup]<br>
+defaultMarkdownHandler = &quot;blackfriday&quot;</p>
+</blockquote>
+<p>仍有一些图片因为年代久远，已经丢失暂时没有更换。<br>
+以及，还有一些想要显示的页面暂时不知道如何实现。<br>
+不过先这样吧。</p>
+<h3 id="收获">收获</h3>
+<p>最大的收获当然是可以重新开始记录生活，要知道现在能安安静静坐下来码会儿博客实在是不容易。希望这一次可以坚持久一点，把这个习惯保持下来。<br>
+另外，借着整理旧博客的机会，重新看了下之前的博文，虽然已经年代久远不堪入目，但我很庆幸有这些记录，文字里依然能感受到年轻时我的热情和对生活的热爱。也激发我重新打开对生活的感官，重新慢慢记录生活。<br>
+还有个收获就是，在了解静态博客的过程中萌生了想要学习代码的念头。<br>
+这也许是一个好的开始吧！</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E7%BC%98%E8%B5%B7">缘起</a></li>
+<li><a href="#%E7%BB%8F%E8%BF%87">经过</a>
+<ul>
+<li><a href="#%E9%9A%BE%E9%A2%98-1%E4%BB%8E-wordpress-%E5%AF%BC%E5%85%A5%E5%88%B0-hugo">难题 1——从 WordPress 导入到 hugo</a></li>
+<li><a href="#%E9%9A%BE%E9%A2%98-2%E6%A0%BC%E5%BC%8F%E9%94%99%E4%B9%B1">难题 2——格式错乱</a></li>
+<li><a href="#%E9%9A%BE%E9%A2%98-3%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA">难题 3——图片无法显示</a></li>
+</ul>
+</li>
+<li><a href="#%E6%94%B6%E8%8E%B7">收获</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://morelight.one/post/2016-08-02-all-my-friends-are-dead/">
+              <h3 class="post-title">
+                我所有朋友都死翘翘了
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  <a href="https://twitter.com/morelight_" target="_blank">  Twitter @莫奈 </a>
+  <a class="rss" href="https://morelight.one/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
