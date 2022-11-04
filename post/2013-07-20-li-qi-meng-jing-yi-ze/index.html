@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>离奇梦境一则 | 莫奈·如一</title>
+<link rel="shortcut icon" href="https://morelight.one/favicon.ico?v=1667535619369">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://morelight.one/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="离奇梦境一则 | 莫奈·如一 - Atom Feed" href="https://morelight.one/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="梦，可以比小说更荒诞，比电影更有3D感。
+在梦中，月球离我很近，仅仅隔着一个台阶，它像是被外来生物操控的座驾，朝我飞旋而来，我躲在台阶之后，看着它在眼前盘旋，突然，它炸掉了。
+场景切换到楼顶，我被坏人一脚踢飞，队友仍和他战斗。画面再切，我俩..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://morelight.one">
+  <img class="avatar" src="https://morelight.one/images/avatar.png?v=1667535619369" alt="">
+  </a>
+  <h1 class="site-title">
+    莫奈·如一
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              离奇梦境一则
+            </h2>
+            <div class="post-info">
+              <span>
+                2013-07-20
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>梦，可以比小说更荒诞，比电影更有3D感。</p>
+<p>在梦中，月球离我很近，仅仅隔着一个台阶，它像是被外来生物操控的座驾，朝我飞旋而来，我躲在台阶之后，看着它在眼前盘旋，突然，它炸掉了。</p>
+<p>场景切换到楼顶，我被坏人一脚踢飞，队友仍和他战斗。画面再切，我俩双双中弹。我感觉我就快醒了！然后果然醒了，有人拿着针管给我注射了一剂药水，告诉我说，这个可以增强你的警惕性，微眯双眼即可激活本技能，我试了一下，果然！</p>
+<p>咻！画面再切，我旁边是高中女同桌，但是她却穿着职业装和我一同坐在教室里听课，讲课的居然是我的大学老师。她让我们赶紧构思一个Loop画面，而我只是搂着女同桌在悄悄耳语。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://morelight.one/post/2013-03-31-xia-yu-yi-zhou/">
+              <h3 class="post-title">
+                夏雨一周
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  <a href="https://twitter.com/morelight_" target="_blank">  Twitter @莫奈 </a>
+  <a class="rss" href="https://morelight.one/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
